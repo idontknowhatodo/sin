@@ -1,0 +1,180 @@
+@import '_common';
+
+$p-tb100: 100px 0;
+
+@mixin flex($jc,$ai,$fd,$fw){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw}
+// @include flex{}
+
+
+header{
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 9;
+    > div{
+        width: 70%;
+        margin: 0 auto;
+        @include flex(space-between, center, row, nowrap);
+        position: relative;
+        a{color: #fff;}
+        h1{font-family: 'Gotham Book';
+            a{
+                background: url('../img/logo.png') no-repeat;
+                font-size: 0;
+                width: 96px; height: 36px;
+                display: inline-block;
+            }
+        }
+        nav{
+            flex-grow: 1;
+            text-align: right;
+            a{
+                padding: 0 2%;}}
+        .trigger{
+            width: 26px; height:16px;
+            position: absolute;
+            right: 0; top: 30%;
+            cursor: pointer;
+            display: none;
+            span{
+                width: 100%;
+                border-bottom: 2px solid #fff;
+                position: absolute;
+                left: 0; top: 50%;}
+                &:nth-child(1){
+                    transform: translateY(-6px);}
+                &:nth-child(3){
+                    transform: translateY(6px);}
+            }
+    }
+}
+
+main{
+.visual{
+    position: relative;
+    >div{
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        @include flex(center, center, column, nowrap);        align-items: center;
+        h2{
+            color: #fff;
+            font-size: 3rem;
+            small{
+                display: block;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+        a{
+            background-color: #fed136;
+            padding: 16px 40px;
+            display: inline-block;
+            color: #fff;
+        }
+        a:hover{
+            background-color: #000;
+        }
+    }
+    >img{
+        width: 100%;
+    }
+}
+
+section{
+    background-color: #f7f7f7;
+    padding: $p-tb100;
+    text-align: center;
+    h2{
+        font-size: 3em;
+        text-transform: uppercase;
+        small{
+            display: block;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: rgb(151, 151, 151);
+        }
+    }
+    ul{width: 70%;
+        @include flex(center, center, row, nowrap);
+        li{
+            p>img{
+            p:nth-of-type(1){
+                padding-bottom: 10%;
+                background-color: #fff;}}
+            p:nth-of-type(2)>b{}
+            p:nth-of-type(2)>em{}
+        }
+    }
+}
+
+.banner{
+    padding:$p-tb100;
+    text-align: center;
+    a{
+        display: inline-block;
+        width:180px; height:40px;
+        font-size:0;
+        margin:0 2%;
+    }
+    $bgurl:(1:'../img/bn_01.jpg',
+    2:'../img/bn_02.jpg',
+    3:'../img/bn_03.jpg',
+    4:'../img/bn_04.jpg');
+    // each 라는 함수는 어떤 값을 반복해서 나타내준다. 숫자는 키 라고 부르고, 뒤에 주소는 밸류. 밸류를 찾기 쉽게 하려고 키를 선언해준다
+    @each $key,$vaule in $bgurl{
+    a:nth-child(#{$key}){
+        background: url($vaule) 0 0 / 100% no-repeat;
+    }}
+    // a:nth-child(2){
+    //     background: url(../img/bn_02.jpg) 0 0 / 100% no-repeat;
+    // }
+    // a:nth-child(3){
+    //     background: url(../img/bn_03.jpg) 0 0 / 100% no-repeat;
+    // }
+    // a:nth-child(4){
+    //     background: url(../img/bn_04.jpg) 0 0 / 100% no-repeat;
+    // }
+
+}
+
+.contact{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: $p-tb100;
+    h2{
+        font-size: 3rem;
+        small{
+            display: block;
+            font-weight: normal;
+            font-size: 1rem;
+        }
+    }
+    
+    div{margin-top: 40px;
+        input{
+            padding: 18px 40px;
+            border: none;
+            width: 30%;
+            vertical-align: middle;}
+        a{
+            vertical-align: middle;
+            background-color: #fed136;
+            padding: 16px 40px;
+            display: inline-block;
+            color: #fff;
+}
+}
+}
+}
+footer{
+    text-transform: capitalize;
+    padding: $p-tb100;
+    text-align: center;}

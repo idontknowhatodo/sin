@@ -1,0 +1,52 @@
+@import '_common';
+
+header{
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 9;
+    > div{
+        width: 70%;
+        margin: 0 auto;
+        @include flex(space-between, center, row, nowrap);
+        position: relative;
+        a{color: #fff;}
+        h1{
+            a{
+                background: url('../img/logo.png') no-repeat;
+                font-size: 0;
+                width: 96px; height: 36px;
+                display: inline-block;
+            }
+        }
+        nav{
+            flex-grow: 1;
+            text-align: right;
+            a{
+                padding: 0 2%;}}
+        .trigger{
+            width: 26px; height:16px;
+            position: absolute;
+            right: 0; top: 30%;
+            cursor: pointer;
+            display: none;
+            span{
+                width: 100%;
+                border-bottom: 2px solid #fff;
+                position: absolute;
+                left: 0; top: 50%;}
+                &:nth-child(1){
+                    transform: translateY(-6px);}
+                &:nth-child(3){
+                    transform: translateY(6px);}
+            }
+    }
+}
+
+
+
+footer{
+    text-transform: capitalize;
+    padding: $p-tb100;
+    text-align: center;}

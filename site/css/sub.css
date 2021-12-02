@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'Spoqa Han Sans';
+  src: url(../font/SpoqaHanSans-Regular.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'NotoSansKR';
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h5, figure, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 30px 0;
+  z-index: 9;
+}
+
+header > div {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+}
+
+header > div a {
+  color: #fff;
+}
+
+header > div h1 a {
+  background: url("../img/logo.png") no-repeat;
+  font-size: 0;
+  width: 96px;
+  height: 36px;
+  display: inline-block;
+}
+
+header > div nav {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+header > div nav a {
+  padding: 0 2%;
+}
+
+header > div .trigger {
+  width: 26px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 30%;
+  cursor: pointer;
+  display: none;
+}
+
+header > div .trigger span {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+header > div .trigger:nth-child(1) {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+header > div .trigger:nth-child(3) {
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+}
+
+footer {
+  text-transform: capitalize;
+  padding: 100px 0;
+  text-align: center;
+}
+/*# sourceMappingURL=sub.css.map */
